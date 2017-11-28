@@ -75,6 +75,8 @@
 		004753801DDC3CD400AF0FA1 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0047534E1DDC3CD400AF0FA1 /* ThumbsViewController.m */; };
 		004753811DDC3CD400AF0FA1 /* UIXToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 004753501DDC3CD400AF0FA1 /* UIXToolbarView.m */; };
 		0093626F1DDD41D100413315 /* HLLTestColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0093626E1DDD41D100413315 /* HLLTestColorViewController.m */; };
+		1A67CCF31FCBF1F00053B1B9 /* LoadAndShowPDFVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A67CCF21FCBF1F00053B1B9 /* LoadAndShowPDFVC.m */; };
+		1A964D421FCC082C001E1A01 /* test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A964D411FCC082C001E1A01 /* test.pdf */; };
 		AAD9532BD391480392612CEE /* libPods-PDFViewAndDownload.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1916837CA069ACC059A13F98 /* libPods-PDFViewAndDownload.a */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +204,9 @@
 		0667E7DA987203D072C2F6AA /* Pods-PDFViewAndDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFViewAndDownload.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDFViewAndDownload/Pods-PDFViewAndDownload.release.xcconfig"; sourceTree = "<group>"; };
 		13B3FB85D7A43EFABE0EDB99 /* Pods-PDFViewAndDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFViewAndDownload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PDFViewAndDownload/Pods-PDFViewAndDownload.debug.xcconfig"; sourceTree = "<group>"; };
 		1916837CA069ACC059A13F98 /* libPods-PDFViewAndDownload.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDFViewAndDownload.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A67CCF11FCBF1F00053B1B9 /* LoadAndShowPDFVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadAndShowPDFVC.h; sourceTree = "<group>"; };
+		1A67CCF21FCBF1F00053B1B9 /* LoadAndShowPDFVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadAndShowPDFVC.m; sourceTree = "<group>"; };
+		1A964D411FCC082C001E1A01 /* test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +374,8 @@
 				004518E61DDC15AC00882606 /* HLLPDFViewController.m */,
 				004518F01DDC2BF800882606 /* HLLWebViewController.h */,
 				004518F11DDC2BF800882606 /* HLLWebViewController.m */,
+				1A67CCF11FCBF1F00053B1B9 /* LoadAndShowPDFVC.h */,
+				1A67CCF21FCBF1F00053B1B9 /* LoadAndShowPDFVC.m */,
 			);
 			path = HLLController;
 			sourceTree = "<group>";
@@ -400,6 +407,7 @@
 		004518C91DDC04BF00882606 /* HLLPDFs */ = {
 			isa = PBXGroup;
 			children = (
+				1A964D411FCC082C001E1A01 /* test.pdf */,
 				004518E81DDC16F100882606 /* git-cheatsheet.pdf */,
 			);
 			path = HLLPDFs;
@@ -641,7 +649,7 @@
 				TargetAttributes = {
 					004518871DDC01C900882606 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = KR9G98P8SN;
+						DevelopmentTeam = CEW846XYSB;
 						ProvisioningStyle = Automatic;
 					};
 					004518A01DDC01C900882606 = {
@@ -689,6 +697,7 @@
 				0045189B1DDC01C900882606 /* LaunchScreen.storyboard in Resources */,
 				0047536C1DDC3CD400AF0FA1 /* Reader-Thumbs@2x.png in Resources */,
 				004518E91DDC16F100882606 /* git-cheatsheet.pdf in Resources */,
+				1A964D421FCC082C001E1A01 /* test.pdf in Resources */,
 				0047536D1DDC3CD400AF0FA1 /* Reader-Thumbs@3x.png in Resources */,
 				004753661DDC3CD400AF0FA1 /* Reader-Mark-Y@2x.png in Resources */,
 				004753571DDC3CD400AF0FA1 /* Reader-Button-H@2x.png in Resources */,
@@ -816,6 +825,7 @@
 				0047537C1DDC3CD400AF0FA1 /* ReaderThumbsView.m in Sources */,
 				004753701DDC3CD400AF0FA1 /* ReaderContentPage.m in Sources */,
 				0047537A1DDC3CD400AF0FA1 /* ReaderThumbRender.m in Sources */,
+				1A67CCF31FCBF1F00053B1B9 /* LoadAndShowPDFVC.m in Sources */,
 				0047536E1DDC3CD400AF0FA1 /* CGPDFDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -966,9 +976,10 @@
 			baseConfigurationReference = 13B3FB85D7A43EFABE0EDB99 /* Pods-PDFViewAndDownload.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KR9G98P8SN;
+				DEVELOPMENT_TEAM = CEW846XYSB;
 				GCC_PREFIX_HEADER = PDFViewAndDownload/Config.pch;
 				INFOPLIST_FILE = PDFViewAndDownload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.CareVoice.PDFViewAndDownload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -980,9 +991,10 @@
 			baseConfigurationReference = 0667E7DA987203D072C2F6AA /* Pods-PDFViewAndDownload.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KR9G98P8SN;
+				DEVELOPMENT_TEAM = CEW846XYSB;
 				GCC_PREFIX_HEADER = PDFViewAndDownload/Config.pch;
 				INFOPLIST_FILE = PDFViewAndDownload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.CareVoice.PDFViewAndDownload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
