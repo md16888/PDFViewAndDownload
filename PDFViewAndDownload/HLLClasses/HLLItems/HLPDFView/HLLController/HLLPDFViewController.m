@@ -13,6 +13,8 @@
 #import "HLLWebViewController.h"        // webViewController
 #import "ReaderViewController.h"
 
+#import "LoadAndShowPDFVC.h"
+
 static NSString *kCellId = @"kCellId";
 
 @interface HLLPDFViewController () <UITableViewDelegate, UITableViewDataSource, QLPreviewControllerDelegate, QLPreviewControllerDataSource, ReaderViewControllerDelegate>
@@ -108,8 +110,29 @@ static NSString *kCellId = @"kCellId";
         case 1:
         {
             NSLog(@"webView");
-            HLLWebViewController *webViewController = [HLLWebViewController alloc];
-            webViewController.webUrlString = PDF_URL;
+            LoadAndShowPDFVC *webViewController = [LoadAndShowPDFVC alloc];
+            NSString *testStr = PDF_URL;
+            static int testData = 0;
+            int numberData = testData % 4;
+            switch (numberData)
+            {
+                case 0:
+                    testStr = @"http://cdn.mozilla.net/pdfjs/tracemonkey.pdf";
+                    break;
+                case 1:
+                    testStr = @"http://www.qupu123.com/downpdf/536454/Op.92.pdf";
+                    break;
+                case 2:
+                    testStr = @"http://www.qupu123.com/downpdf/535668/9%E9%A6%96%E4%BC%A0%E5%A5%87%20.pdf";
+                    break;
+                case 3:
+                    break;
+                    
+                default:
+                    break;
+            }
+            testData++;
+            webViewController.webUrlString = testStr;
             [self.navigationController pushViewController:webViewController animated:YES];
             break;
         }
